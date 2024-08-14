@@ -1,0 +1,14 @@
+{
+  "name": "deobfuscate-preemptive",
+  "version": "1.0.0",
+  "description": "Deobfuscate PreEmptive's JSDefender Demo",
+  "dependencies": {
+    "@nyariv/sandboxjs": "^0.8.23",
+    "argparse": "^2.0.1",
+    "refactor-plugin-common": "^2.0.1",
+    "shift-refactor": "^2.0.0"
+  },
+  "scripts": {
+    "start": "node deobfuscate.js"
+  }
+}
