@@ -23,7 +23,7 @@ npm i
 
 ## Usage
 
-```sh
+```
 usage: deobfuscate.js [-h] file
 
 Deobfuscate PreEmptive's JSDefender Demo
@@ -35,7 +35,7 @@ optional arguments:
   -h, --help  show this help message and exit
 ```
 
-##### Example
+###### Example
 
 Take the following source code as an example:
 
@@ -71,3 +71,6 @@ Now, see `deobfuscated.js` for what should be a close replica of the original so
 ```js
 console.log("Hello, world!");
 ```
+
+> [!NOTE]  
+> Some advanced JavaScript features such as optional chaining (`?.`) and nullish coalescing (`??`) are not supported by the version of Shift. When receiving errors about these pieces of syntax, consider patching them to something else temporarely.
