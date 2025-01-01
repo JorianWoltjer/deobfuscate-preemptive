@@ -3,7 +3,7 @@
 This tool automatically deobfuscates JavaScript code 'Protected' with [PreEmptive's JSDefender Demo](https://www.preemptive.com/online-javascript-obfuscator/). Besides variable names and comments which are not recoverable, the resulting code should be a perfect replica of the original code. This makes it easy to analyze the code futher.
 
 > [!WARNING]  
-> Only deobfuscate scripts that you trust, as `eval()` is used in many places! Consider using a docker container to sandbox it.
+> Only deobfuscate scripts that you trust, as `eval()` is used in many places! Consider using the docker container to sandbox it.
 
 This script heavily uses [`shift-refactor`](https://github.com/jsoverson/shift-refactor) to parse and rewrite the JavaScript code into something more readable. Some operations that are performed:
 
@@ -19,6 +19,19 @@ This script heavily uses [`shift-refactor`](https://github.com/jsoverson/shift-r
 git clone https://github.com/JorianWoltjer/deobfuscate-preemptive.git && cd deobfuscate-preemptive
 npm i
 ./deobfuscate.js --help
+```
+
+When deobfuscating untrusted scripts, you should sandbox this tool. A [Dockerfile](Dockerfile) was made to run it in an isolated environment from the host using [Docker](https://www.docker.com/). With the following command, it can be built:
+
+```sh
+docker build -t deobfuscate-preemptive .
+```
+
+Then, you can run it from anywhere by mounting the current working directory into it and working with those files, for example:
+
+```sh
+alias deobfuscate-preemptive='docker run -v $(pwd):/pwd -w /pwd --rm deobfuscate-preemptive'
+deobfuscate-preemptive obfuscated.js > deobfuscated.js
 ```
 
 ## Usage
