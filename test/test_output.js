@@ -1,38 +1,40 @@
-let sOwg = 42;
-const UPzg = "Hello, World!";
-const oLqg = [1, 2, 3, 4, 5];
-const QMtg = `The value is ${sOwg} and the constant is ${UPzg}`;
-const kIkg = {name: "Alice", age: 30, address: {city: "Wonderland", postalCode: "12345"}, hobbies: ["reading", "chess"]};
-const {name: MJng, age: gFeg, address: {city: IGhg}} = kIkg;
-const [IaVg, ...kcYg] = kIkg.hobbies;
-const EXOg = (gZRg, AUIg) => gZRg + AUIg;
-const cWLg = (wRCg, YSFg, Ymth) => Ymth(wRCg, YSFg);
-const Aowh = cWLg(10, 5, EXOg);
-const Ujnh = [...oLqg, 6, 7, 8];
-function wlqh(...Qghh) {
-  console.log(Qghh);
+import {readFileSync} from "fs";
+const {writeFileSync: Ymth} = require("fs");
+let Aowh = 42;
+const Ujnh = "Hello, World!";
+const wlqh = [1, 2, 3, 4, 5];
+const Qghh = `The value is ${Aowh} and the constant is ${Ujnh}`;
+const sikh = {name: "Alice", age: 30, address: {city: "Wonderland", postalCode: "12345"}, hobbies: ["reading", "chess"]};
+const {name: Mdbh, age: ofeh, address: {city: QEfe}} = sikh;
+const [sGie, ...MBZd] = sikh.hobbies;
+const oDce = (IyTd, kAWd) => IyTd + kAWd;
+const EvNd = (gxQd, gRDe, ISGe) => ISGe(gxQd, gRDe);
+const cOxe = EvNd(10, 5, oDce);
+const EPAe = [...wlqh, 6, 7, 8];
+function YKre(...AMue) {
+  console.log(AMue);
 }
-function sikh() {
-  let Mdbh = 0;
+function UHle() {
+  let wJoe = 0;
   return function () {
-    Mdbh += 1;
-    return Mdbh;
+    wJoe += 1;
+    return wJoe;
   };
 }
-const ofeh = sikh();
-async function QEfe(sGie) {
+const wdcf = UHle();
+async function Yeff(saWe) {
   try {
-    const MBZd = await fetch(sGie);
-    if (!MBZd.ok) throw new Error("Network response was not ok");
-    const IyTd = await MBZd.json();
-    return IyTd;
-  } catch (kAWd) {
-    console.error("Fetch error:", kAWd);
+    const UbZe = await fetch(saWe);
+    if (!UbZe.ok) throw new Error("Network response was not ok");
+    const QYSe = await UbZe.json();
+    return QYSe;
+  } catch (kUJe) {
+    console.error("Fetch error:", kUJe);
   }
 }
 class Animal {
-  constructor(gRDe) {
-    this.name = gRDe;
+  constructor(orDf) {
+    this.name = orDf;
   }
   speak() {
     console.log(`${this.name} makes a noise.`);
@@ -42,9 +44,9 @@ class Animal {
   }
 }
 class Dog extends Animal {
-  constructor(EPAe, YKre) {
-    super(EPAe);
-    this.breed = YKre;
+  constructor(Ejof, glrf) {
+    super(Ejof);
+    this.breed = glrf;
   }
   speak() {
     console.log(`${this.name} barks.`);
@@ -53,28 +55,28 @@ class Dog extends Animal {
     return "Dog";
   }
 }
-const AMue = new Dog("Rex", "Labrador");
-AMue.speak();
+const Agif = new Dog("Rex", "Labrador");
+Agif.speak();
 console.log(Dog.species());
 (function () {
   console.log("IIFE running!");
 }());
 console.log(1337);
-const UHle = sOwg > 40 ? "Greater than 40" : "Less than or equal to 40";
-const wJoe = 5 & 3;
-const wdcf = /hello/i;
-const Yeff = wdcf.test("Hello world");
-function saWe(UbZe) {
-  if (UbZe > 0) {
-    console.log(`${UbZe} is positive`);
-  } else if (UbZe < 0) {
-    console.log(`${UbZe} is negative`);
+const cilf = Aowh > 40 ? "Greater than 40" : "Less than or equal to 40";
+const EHmc = 5 & 3;
+const gJpc = /hello/i;
+const AEgc = gJpc.test("Hello world");
+function cGjc(wBac) {
+  if (wBac > 0) {
+    console.log(`${wBac} is positive`);
+  } else if (wBac < 0) {
+    console.log(`${wBac} is negative`);
   } else {
-    console.log(`${UbZe} is zero`);
+    console.log(`${wBac} is zero`);
   }
 }
-function kUJe(MVMe) {
-  switch (MVMe) {
+function UzXb(UTKc) {
+  switch (UTKc) {
     case 0:
       return "Sunday";
     case 1:
@@ -93,65 +95,65 @@ function kUJe(MVMe) {
       return "Invalid day";
   }
 }
-function MpAf(orDf) {
-  for (let koxf = 0; koxf <= orDf; koxf++) {
-    console.log(koxf);
+function wVNc(QQEc) {
+  for (let MNyc = 0; MNyc <= QQEc; MNyc++) {
+    console.log(MNyc);
   }
 }
-function Ejof(glrf) {
-  while (glrf > 0) {
-    console.log(glrf);
-    glrf--;
+function oPBc(IKsc) {
+  while (IKsc > 0) {
+    console.log(IKsc);
+    IKsc--;
   }
   console.log("Blast off!");
 }
-function Agif(cilf) {
+function kMvc(kgjd) {
   do {
-    console.log(cilf);
-    cilf--;
-  } while (cilf > 0);
+    console.log(kgjd);
+    kgjd--;
+  } while (kgjd > 0);
 }
-const gJpc = {firstName: "John", lastName: "Doe", age: 25};
-function AEgc(cGjc) {
-  for (const wBac in cGjc) {
-    if (cGjc.hasOwnProperty(wBac)) {
-      console.log(`${wBac}: ${cGjc[wBac]}`);
+const gddd = {firstName: "John", lastName: "Doe", age: 25};
+function Iegd(caXc) {
+  for (const Ebad in caXc) {
+    if (caXc.hasOwnProperty(Ebad)) {
+      console.log(`${Ebad}: ${caXc[Ebad]}`);
     }
   }
 }
-const syUb = ["apple", "banana", "cherry"];
-function UzXb(UTKc) {
-  for (const wVNc of UTKc) {
-    console.log(wVNc);
+const AYTc = ["apple", "banana", "cherry"];
+function AsHd(cuKd) {
+  for (const wpBd of cuKd) {
+    console.log(wpBd);
   }
 }
-saWe(10);
-saWe(-5);
-saWe(0);
-console.log(kUJe(3));
-console.log(kUJe(7));
-MpAf(5);
-Ejof(5);
-Agif(3);
-AEgc(gJpc);
-UzXb(syUb);
-function QQEc(sSHc) {
-  for (let oPBc = 0; oPBc < sSHc.length; oPBc++) {
-    const IKsc = sSHc[oPBc];
-    for (let kgjd = 0; kgjd < IKsc.length; kgjd++) {
-      const Mhmd = IKsc[kgjd];
-      if (Mhmd > 0) {
-        if (Mhmd % 2 === 0) {
-          console.log(`Even positive number found: ${Mhmd}`);
+cGjc(10);
+cGjc(-5);
+cGjc(0);
+console.log(UzXb(3));
+console.log(UzXb(7));
+wVNc(5);
+oPBc(5);
+kMvc(3);
+Iegd(gddd);
+AsHd(AYTc);
+function YqEd(smvd) {
+  for (let ojpd = 0; ojpd < smvd.length; ojpd++) {
+    const Qksd = smvd[ojpd];
+    for (let ULw = 0; ULw < Qksd.length; ULw++) {
+      const oHn = Qksd[ULw];
+      if (oHn > 0) {
+        if (oHn % 2 === 0) {
+          console.log(`Even positive number found: ${oHn}`);
         } else {
-          console.log(`Odd positive number found: ${Mhmd}`);
+          console.log(`Odd positive number found: ${oHn}`);
         }
-      } else if (Mhmd < 0) {
-        console.log(`Negative number found: ${Mhmd}`);
+      } else if (oHn < 0) {
+        console.log(`Negative number found: ${oHn}`);
       } else {
-        console.log(`Zero found at position [${oPBc}, ${kgjd}]`);
+        console.log(`Zero found at position [${ojpd}, ${ULw}]`);
       }
-      switch (Mhmd) {
+      switch (oHn) {
         case 1:
           console.log(`Value is exactly one.`);
           break;
@@ -164,18 +166,18 @@ function QQEc(sSHc) {
         default:
           console.log(`Value is neither 1, -1, nor 0.`);
       }
-      let Ebad = Mhmd;
-      while (Ebad > 0) {
-        console.log(`Countdown from ${Ebad}`);
-        Ebad--;
-        let YWQc = Ebad;
+      let gBb = oHn;
+      while (gBb > 0) {
+        console.log(`Countdown from ${gBb}`);
+        gBb--;
+        let ICe = gBb;
         do {
-          console.log(`  Double countdown: ${YWQc}`);
-          YWQc--;
-        } while (YWQc > 0);
+          console.log(`  Double countdown: ${ICe}`);
+          ICe--;
+        } while (ICe > 0);
       }
     }
   }
 }
-const AsHd = [[1, -2, 3], [0, 4, -5], [-1, 0, 6]];
-QQEc(AsHd);
+const kYU = [[1, -2, 3], [0, 4, -5], [-1, 0, 6]];
+YqEd(kYU);

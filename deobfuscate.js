@@ -11,6 +11,7 @@ const args = parser.parse_args();
 
 const fs = require('fs');
 const { refactor } = require('shift-refactor');
+const { parseModule } = require('shift-parser');
 const { commonMethods } = require('refactor-plugin-common');
 const Shift = require('shift-ast');
 
@@ -20,7 +21,7 @@ const src = fs.readFileSync(args.file, 'utf-8');
 
 
 function deobfuscate(src) {
-  const $script = refactor(src, commonMethods);
+  const $script = refactor(parseModule(src), commonMethods);
 
   // Find decoders and setup arguments
   const decoders_name = $script(`VariableDeclarator[init=null]`).nodes[0].binding.name;

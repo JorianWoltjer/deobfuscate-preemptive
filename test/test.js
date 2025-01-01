@@ -1,5 +1,8 @@
 /// === Syntax ===
 
+import { readFileSync } from "fs";
+const { writeFileSync } = require("fs");
+
 // Variables and constants
 let variable = 42;
 const constantValue = 'Hello, World!';
